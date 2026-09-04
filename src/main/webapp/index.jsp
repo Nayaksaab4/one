@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
-  <title>NexusShop · vibrant e‑commerce</title>
+  <title>NexusShop · playful UI</title>
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* ----- reset & base (colorful) ----- */
+    /* ----- reset & base (playful, colorful) ----- */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: #f9f5ff;
+      font-family: 'Quicksand', system-ui, sans-serif;
+      background: #faf0f5;
       color: #1e1a2b;
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
@@ -26,16 +26,16 @@
 
     .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
 
-    /* ----- header (gradient, playful) ----- */
+    /* ----- header (bubbly, playful) ----- */
     header {
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(255, 248, 245, 0.85);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-bottom: 2px solid #ffe6d5;
-      box-shadow: 0 4px 20px rgba(255, 107, 107, 0.08);
+      background: rgba(255, 248, 250, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 4px solid #ffd6e0;
+      box-shadow: 0 8px 30px rgba(255, 107, 157, 0.08);
     }
     .header-grid {
       display: flex;
@@ -46,59 +46,59 @@
       flex-wrap: wrap;
     }
     .brand {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 1.8rem;
-      letter-spacing: -0.02em;
+      font-family: 'Fredoka One', cursive;
+      font-size: 2rem;
+      letter-spacing: 0.02em;
       display: flex;
       align-items: center;
       gap: 8px;
-      background: linear-gradient(135deg, #ff6b6b, #ffb347);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: #ff6b9d;
+      text-shadow: 2px 2px 0 #ffe2ec;
     }
-    .brand i { -webkit-text-fill-color: #ff6b6b; font-size: 1.9rem; }
+    .brand i { color: #ffb347; font-size: 2rem; text-shadow: 2px 2px 0 #ffe0b5; }
 
     .nav-links {
       display: flex;
-      gap: 4px;
+      gap: 6px;
       align-items: center;
       flex-wrap: wrap;
     }
     .nav-links a {
-      padding: 8px 16px;
+      padding: 8px 18px;
       border-radius: 40px;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.95rem;
       color: #2d1b3d;
       transition: 0.2s;
-      background: transparent;
+      background: rgba(255, 255, 255, 0.3);
+      border: 2px solid transparent;
     }
-    .nav-links a i { margin-right: 6px; opacity: 0.8; }
+    .nav-links a i { margin-right: 6px; }
     .nav-links a:hover {
-      background: #ffe6d5;
-      color: #d4524e;
-      transform: scale(1.02);
+      background: #ffd6e0;
+      border-color: #ff6b9d;
+      transform: scale(1.04) rotate(-1deg);
+      color: #b3416b;
     }
 
     .header-actions {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
     .search-wrap {
       display: flex;
       align-items: center;
-      background: #fff3ed;
+      background: #ffffff;
       border-radius: 60px;
       padding: 4px 4px 4px 20px;
-      border: 2px solid #ffd5c2;
+      border: 3px solid #ffb3c6;
       transition: 0.2s;
+      box-shadow: 0 4px 12px rgba(255, 107, 157, 0.08);
     }
     .search-wrap:focus-within {
-      border-color: #ff7a5c;
-      box-shadow: 0 0 0 6px rgba(255, 107, 107, 0.15);
+      border-color: #ff6b9d;
+      box-shadow: 0 0 0 8px rgba(255, 107, 157, 0.12);
       background: #ffffff;
     }
     .search-wrap input {
@@ -106,98 +106,109 @@
       background: transparent;
       padding: 10px 0;
       font-size: 0.95rem;
-      width: 160px;
+      width: 150px;
       outline: none;
       color: #1e1a2b;
+      font-weight: 600;
     }
     .search-wrap button {
-      background: linear-gradient(135deg, #ff7a5c, #ffb347);
+      background: linear-gradient(145deg, #ff6b9d, #ffb347);
       color: white;
-      padding: 10px 18px;
-      border-radius: 40px;
-      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 60px;
+      font-weight: 700;
       transition: 0.15s;
       display: flex;
       align-items: center;
       gap: 6px;
-      box-shadow: 0 4px 10px rgba(255, 107, 107, 0.25);
+      box-shadow: 0 4px 14px rgba(255, 107, 157, 0.3);
+      border: 2px solid white;
     }
-    .search-wrap button:hover { transform: scale(1.03); box-shadow: 0 6px 14px rgba(255, 107, 107, 0.35); }
+    .search-wrap button:hover { transform: scale(1.05) rotate(1deg); box-shadow: 0 6px 20px rgba(255, 107, 157, 0.4); }
 
     .cart-btn {
       position: relative;
-      font-size: 1.4rem;
-      padding: 8px 14px;
-      border-radius: 40px;
-      background: #fff3ed;
-      border: 2px solid #ffd5c2;
+      font-size: 1.5rem;
+      padding: 10px 16px;
+      border-radius: 60px;
+      background: #ffffff;
+      border: 3px solid #ffb3c6;
       transition: 0.15s;
       display: flex;
       align-items: center;
       gap: 6px;
       color: #2d1b3d;
+      box-shadow: 0 4px 12px rgba(255, 107, 157, 0.06);
     }
-    .cart-btn:hover { background: #ffe6d5; border-color: #ff7a5c; }
+    .cart-btn:hover { background: #ffd6e0; border-color: #ff6b9d; transform: scale(1.04); }
     .cart-badge {
       position: absolute;
-      top: -8px;
-      right: -8px;
-      background: #ff6b6b;
+      top: -10px;
+      right: -10px;
+      background: #ff6b9d;
       color: white;
       font-size: 0.7rem;
-      font-weight: 700;
-      width: 24px;
-      height: 24px;
+      font-weight: 800;
+      width: 26px;
+      height: 26px;
       border-radius: 30px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 2px 8px rgba(255, 107, 107, 0.4);
+      border: 3px solid white;
+      box-shadow: 0 2px 10px rgba(255, 107, 157, 0.3);
     }
     .mobile-toggle {
       display: none;
-      font-size: 1.7rem;
+      font-size: 1.8rem;
       padding: 0 6px;
-      color: #2d1b3d;
+      color: #ff6b9d;
     }
 
-    /* ----- hero (colorful gradient) ----- */
+    /* ----- hero (fun, gradient with illustration) ----- */
     .hero {
-      background: linear-gradient(145deg, #ffdde1, #fad0c4, #fbc2eb, #a18cd1);
+      background: linear-gradient(145deg, #ffd6e0, #ffe2b5, #ffd6f0, #b5d9ff);
       background-size: 300% 300%;
-      animation: gradientMove 12s ease infinite;
-      border-radius: 40px;
+      animation: wiggleGrad 10s ease infinite;
+      border-radius: 60px 60px 60px 12px;
       margin: 24px 0 20px;
-      padding: 48px 40px;
+      padding: 44px 36px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      box-shadow: 0 12px 40px rgba(161, 140, 209, 0.2);
+      box-shadow: 0 16px 48px rgba(255, 107, 157, 0.08);
+      border: 4px solid rgba(255, 255, 255, 0.5);
     }
-    @keyframes gradientMove {
+    @keyframes wiggleGrad {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-    .hero-content { flex: 1 1 280px; }
+    .hero-content { flex: 1 1 260px; }
     .hero-content h1 {
-      font-family: 'Syne', sans-serif;
-      font-size: 2.8rem;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
+      font-family: 'Fredoka One', cursive;
+      font-size: 3rem;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
       color: #1e1a2b;
-      text-shadow: 0 2px 10px rgba(255,255,255,0.3);
+      text-shadow: 4px 4px 0 rgba(255, 255, 255, 0.6);
     }
+    .hero-content h1 span { color: #ff6b9d; }
     .hero-content p {
       font-size: 1.1rem;
       color: #2d1b3d;
-      max-width: 460px;
-      margin-bottom: 22px;
-      font-weight: 500;
+      max-width: 440px;
+      margin-bottom: 24px;
+      font-weight: 600;
+      background: rgba(255,255,255,0.4);
+      padding: 8px 16px;
+      border-radius: 40px;
+      display: inline-block;
+      backdrop-filter: blur(4px);
     }
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
     .btn {
       padding: 14px 32px;
       border-radius: 60px;
@@ -206,30 +217,32 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      border: none;
+      border: 3px solid transparent;
     }
     .btn-primary {
       background: #1e1a2b;
       color: white;
-      box-shadow: 0 6px 16px rgba(30, 26, 43, 0.2);
+      box-shadow: 0 6px 20px rgba(30, 26, 43, 0.15);
+      border-color: white;
     }
-    .btn-primary:hover { background: #3a2d4a; transform: scale(1.03); }
+    .btn-primary:hover { background: #ff6b9d; transform: scale(1.04) rotate(-2deg); border-color: #ff6b9d; }
     .btn-outline {
-      background: rgba(255,255,255,0.3);
-      backdrop-filter: blur(4px);
-      border: 2px solid #1e1a2b;
+      background: rgba(255,255,255,0.5);
+      backdrop-filter: blur(8px);
+      border: 3px solid #1e1a2b;
       color: #1e1a2b;
     }
-    .btn-outline:hover { background: #1e1a2b; color: white; }
+    .btn-outline:hover { background: #1e1a2b; color: white; transform: scale(1.04) rotate(2deg); }
     .hero-image {
-      flex: 0 0 180px;
+      flex: 0 0 160px;
       text-align: center;
-      font-size: 6rem;
-      color: #ff6b6b;
-      filter: drop-shadow(0 8px 20px rgba(255, 107, 107, 0.3));
+      font-size: 7rem;
+      color: #ff6b9d;
+      filter: drop-shadow(0 8px 30px rgba(255, 107, 157, 0.2));
+      transform: rotate(-6deg);
     }
 
-    /* ----- section headings (vibrant) ----- */
+    /* ----- section headings (fun) ----- */
     .section-head {
       display: flex;
       align-items: baseline;
@@ -239,87 +252,90 @@
       gap: 8px;
     }
     .section-head h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, #ff6b6b, #a18cd1);
+      font-family: 'Fredoka One', cursive;
+      font-size: 2.2rem;
+      color: #1e1a2b;
+      background: linear-gradient(145deg, #ff6b9d, #ffb347);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      text-shadow: 2px 2px 0 #ffe2ec;
     }
     .section-head a {
-      color: #d4524e;
-      font-weight: 600;
-      background: #ffe6d5;
-      padding: 6px 18px;
+      background: #ffd6e0;
+      padding: 6px 20px;
       border-radius: 40px;
+      font-weight: 700;
+      color: #b3416b;
       transition: 0.15s;
+      border: 2px solid transparent;
     }
-    .section-head a:hover { background: #ffd5c2; color: #a8322e; }
+    .section-head a:hover { background: #ff6b9d; color: white; border-color: white; transform: scale(1.04); }
 
-    /* ----- categories (colorful tiles) ----- */
+    /* ----- categories (bubble tiles) ----- */
     .cat-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 16px;
+      gap: 18px;
     }
     .cat-card {
       background: white;
       padding: 24px 12px;
-      border-radius: 28px;
+      border-radius: 60px 60px 60px 12px;
       text-align: center;
       transition: 0.25s;
-      border: 2px solid transparent;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+      border: 4px solid #ffb3c6;
+      box-shadow: 0 8px 24px rgba(255, 107, 157, 0.06);
       cursor: default;
-      background: linear-gradient(145deg, #ffffff, #fcf6ff);
+      background: linear-gradient(145deg, #ffffff, #fff5f8);
     }
     .cat-card:nth-child(1) { border-color: #ffb3b3; }
     .cat-card:nth-child(2) { border-color: #ffd9b3; }
     .cat-card:nth-child(3) { border-color: #ffe6b3; }
-    .cat-card:nth-child(4) { border-color: #b3e0ff; }
+    .cat-card:nth-child(4) { border-color: #b3d9ff; }
     .cat-card:nth-child(5) { border-color: #d4b3ff; }
     .cat-card:nth-child(6) { border-color: #ffb3e6; }
     .cat-card:hover {
-      transform: translateY(-6px) scale(1.02);
-      box-shadow: 0 16px 36px rgba(161, 140, 209, 0.12);
+      transform: translateY(-8px) scale(1.03) rotate(-2deg);
+      box-shadow: 0 20px 48px rgba(255, 107, 157, 0.12);
     }
-    .cat-card i { font-size: 2.4rem; margin-bottom: 6px; }
+    .cat-card i { font-size: 2.6rem; margin-bottom: 4px; }
     .cat-card:nth-child(1) i { color: #ff6b6b; }
     .cat-card:nth-child(2) i { color: #ff9f43; }
     .cat-card:nth-child(3) i { color: #feca57; }
     .cat-card:nth-child(4) i { color: #4ea8de; }
     .cat-card:nth-child(5) i { color: #9b5de5; }
     .cat-card:nth-child(6) i { color: #ff6b9d; }
-    .cat-card h4 { font-weight: 700; font-size: 1rem; color: #1e1a2b; }
-    .cat-card span { font-size: 0.75rem; color: #6b5a7a; font-weight: 500; }
+    .cat-card h4 { font-weight: 700; font-size: 1.1rem; color: #1e1a2b; }
+    .cat-card span { font-size: 0.75rem; color: #a58ab5; font-weight: 600; }
 
-    /* ----- product grid (colorful cards) ----- */
+    /* ----- product grid (playful cards) ----- */
     .product-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-      gap: 24px;
+      gap: 26px;
     }
     .product-card {
       background: white;
-      border-radius: 28px;
+      border-radius: 40px 40px 40px 12px;
       overflow: hidden;
       transition: 0.25s ease;
-      border: 2px solid #f0e7ff;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+      border: 4px solid #ffd6e0;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.02);
       display: flex;
       flex-direction: column;
     }
     .product-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 44px rgba(161, 140, 209, 0.12);
-      border-color: #d4b3ff;
+      transform: translateY(-10px) rotate(1deg);
+      box-shadow: 0 24px 56px rgba(255, 107, 157, 0.08);
+      border-color: #ff6b9d;
     }
     .product-card img {
       height: 190px;
       object-fit: cover;
       width: 100%;
       background: #f5edff;
+      border-bottom: 4px solid #ffd6e0;
     }
     .product-body {
       padding: 14px 16px 8px;
@@ -334,15 +350,16 @@
     }
     .product-body .category-tag {
       font-size: 0.7rem;
-      font-weight: 600;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.04em;
-      color: #9b5de5;
-      background: #f0e7ff;
-      padding: 2px 12px;
+      color: #ff6b9d;
+      background: #ffe2ec;
+      padding: 2px 14px;
       border-radius: 40px;
       align-self: flex-start;
       margin: 4px 0 6px;
+      border: 2px solid #ffb3c6;
     }
     .price-row {
       display: flex;
@@ -350,9 +367,9 @@
       gap: 10px;
       margin: 8px 0 4px;
     }
-    .price { font-weight: 700; font-size: 1.3rem; color: #1e1a2b; }
-    .old-price { text-decoration: line-through; color: #a58ab5; font-size: 0.9rem; }
-    .rating { color: #f5b342; font-size: 0.85rem; letter-spacing: 1px; }
+    .price { font-weight: 800; font-size: 1.3rem; color: #1e1a2b; }
+    .old-price { text-decoration: line-through; color: #a58ab5; font-weight: 600; }
+    .rating { color: #f5b342; font-size: 0.9rem; letter-spacing: 2px; }
     .product-footer {
       padding: 8px 16px 16px;
       display: flex;
@@ -360,101 +377,102 @@
     }
     .add-btn {
       flex: 1;
-      background: linear-gradient(135deg, #a18cd1, #fbc2eb);
-      color: #1e1a2b;
+      background: linear-gradient(145deg, #ff6b9d, #ffb347);
+      color: white;
       padding: 10px 0;
       border-radius: 60px;
-      font-weight: 700;
+      font-weight: 800;
       transition: 0.15s;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 6px;
-      border: none;
+      border: 3px solid white;
+      box-shadow: 0 4px 14px rgba(255, 107, 157, 0.2);
     }
-    .add-btn:hover { transform: scale(1.03); box-shadow: 0 4px 14px rgba(161, 140, 209, 0.3); }
+    .add-btn:hover { transform: scale(1.04) rotate(-2deg); box-shadow: 0 8px 24px rgba(255, 107, 157, 0.3); }
     .wish-btn {
-      background: #f5edff;
-      border-radius: 40px;
-      padding: 0 16px;
+      background: #ffe2ec;
+      border-radius: 60px;
+      padding: 0 18px;
       transition: 0.15s;
       display: flex;
       align-items: center;
-      font-size: 1.2rem;
-      color: #9b5de5;
-      border: 2px solid transparent;
+      font-size: 1.3rem;
+      color: #ff6b9d;
+      border: 3px solid #ffb3c6;
     }
-    .wish-btn:hover { background: #ffdde1; color: #ff6b6b; border-color: #ffb3b3; }
+    .wish-btn:hover { background: #ff6b9d; color: white; border-color: white; transform: scale(1.08); }
 
-    /* ----- flash sale (bold colors) ----- */
+    /* ----- flash sale (bold, bubbly) ----- */
     .deal-card {
-      background: linear-gradient(145deg, #ffffff, #fcf6ff);
-      border-radius: 36px;
+      background: linear-gradient(145deg, #ffffff, #fff5f8);
+      border-radius: 60px 60px 60px 12px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       gap: 24px;
-      padding: 24px 32px;
-      border: 2px solid #ffd5c2;
-      box-shadow: 0 12px 32px rgba(255, 107, 107, 0.06);
+      padding: 28px 32px;
+      border: 4px solid #ffb3c6;
+      box-shadow: 0 12px 40px rgba(255, 107, 157, 0.06);
       margin: 16px 0 8px;
     }
     .deal-card img {
       width: 170px;
       height: 170px;
       object-fit: cover;
-      border-radius: 28px;
-      background: #ffdde1;
-      border: 3px solid #ffb3b3;
+      border-radius: 40px 40px 40px 8px;
+      background: #ffd6e0;
+      border: 4px solid #ff6b9d;
+      transform: rotate(-4deg);
     }
     .deal-content { flex: 1; }
     .deal-content h3 {
-      font-family: 'Syne', sans-serif;
-      font-size: 2rem;
-      background: linear-gradient(135deg, #ff6b6b, #ffb347);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      font-family: 'Fredoka One', cursive;
+      font-size: 2.2rem;
+      color: #1e1a2b;
     }
+    .deal-content h3 i { color: #ff6b9d; }
     .timer {
       display: flex;
-      gap: 12px;
+      gap: 14px;
       margin: 14px 0;
     }
     .time-box {
       background: #1e1a2b;
       color: white;
-      padding: 8px 14px;
-      border-radius: 20px;
-      min-width: 60px;
+      padding: 8px 16px;
+      border-radius: 30px;
+      min-width: 64px;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(30, 26, 43, 0.2);
+      border: 3px solid #ffb347;
+      box-shadow: 0 4px 16px rgba(30, 26, 43, 0.15);
     }
-    .time-box div:first-child { font-weight: 800; font-size: 1.5rem; color: #ffb347; }
-    .time-box span { font-size: 0.7rem; opacity: 0.8; }
-    .deal-price { font-size: 2rem; font-weight: 800; color: #ff6b6b; }
-    .deal-discount { background: #ff6b6b; color: white; padding: 4px 16px; border-radius: 40px; font-weight: 700; }
+    .time-box div:first-child { font-weight: 800; font-size: 1.6rem; color: #ffb347; }
+    .time-box span { font-size: 0.7rem; opacity: 0.8; font-weight: 600; }
+    .deal-price { font-size: 2rem; font-weight: 800; color: #ff6b9d; }
+    .deal-discount { background: #ff6b9d; color: white; padding: 4px 18px; border-radius: 40px; font-weight: 700; border: 3px solid white; }
 
     /* ----- testimonials (colorful) ----- */
     .testimonial-scroll {
       display: flex;
-      gap: 20px;
+      gap: 22px;
       overflow-x: auto;
       padding: 8px 4px 16px;
       scroll-snap-type: x mandatory;
     }
     .testimonial-card {
       background: white;
-      border-radius: 28px;
-      padding: 20px 22px;
+      border-radius: 40px 40px 40px 8px;
+      padding: 20px 24px;
       min-width: 270px;
       flex: 0 0 auto;
       scroll-snap-align: start;
-      border: 2px solid #f0e7ff;
-      box-shadow: 0 4px 16px rgba(161, 140, 209, 0.04);
+      border: 4px solid #ffd6e0;
+      box-shadow: 0 8px 28px rgba(255, 107, 157, 0.04);
     }
-    .testimonial-card .rating { font-size: 1.1rem; margin-bottom: 4px; }
-    .testimonial-card p { font-weight: 500; color: #2d1b3d; }
+    .testimonial-card .rating { font-size: 1.2rem; margin-bottom: 4px; }
+    .testimonial-card p { font-weight: 600; color: #2d1b3d; }
     .testimonial-card .avatar {
       display: flex;
       align-items: center;
@@ -462,29 +480,31 @@
       margin-top: 12px;
     }
     .testimonial-card .avatar img {
-      width: 48px;
-      height: 48px;
-      border-radius: 40px;
+      width: 50px;
+      height: 50px;
+      border-radius: 60px;
       object-fit: cover;
-      border: 3px solid #fbc2eb;
+      border: 4px solid #ffb3c6;
     }
 
-    /* ----- newsletter (gradient) ----- */
+    /* ----- newsletter (fun gradient) ----- */
     .newsletter-box {
-      background: linear-gradient(145deg, #a18cd1, #fbc2eb, #ffdde1);
+      background: linear-gradient(145deg, #ffd6e0, #ffe2b5, #b5d9ff);
+      background-size: 200% 200%;
+      animation: wiggleGrad 8s ease infinite;
       color: #1e1a2b;
-      border-radius: 40px;
+      border-radius: 60px 60px 60px 12px;
       padding: 40px 28px;
       text-align: center;
       margin: 20px 0 10px;
-      box-shadow: 0 8px 32px rgba(161, 140, 209, 0.15);
+      border: 4px solid rgba(255,255,255,0.6);
+      box-shadow: 0 8px 32px rgba(255, 107, 157, 0.06);
     }
     .newsletter-box h3 {
-      font-family: 'Syne', sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
+      font-family: 'Fredoka One', cursive;
+      font-size: 2.2rem;
     }
-    .newsletter-box p { opacity: 0.8; font-weight: 500; margin-bottom: 14px; }
+    .newsletter-box p { font-weight: 600; opacity: 0.8; margin-bottom: 14px; }
     .newsletter-form {
       display: flex;
       justify-content: center;
@@ -494,30 +514,32 @@
     .newsletter-form input {
       padding: 14px 24px;
       border-radius: 60px;
-      border: 2px solid #ffffff;
+      border: 4px solid #ffffff;
       flex: 1 1 240px;
       font-size: 1rem;
       background: rgba(255,255,255,0.7);
       backdrop-filter: blur(4px);
+      font-weight: 600;
     }
-    .newsletter-form input:focus { outline: none; border-color: #ff6b6b; background: white; }
+    .newsletter-form input:focus { outline: none; border-color: #ff6b9d; background: white; }
     .newsletter-form button {
       background: #1e1a2b;
       color: white;
-      padding: 14px 36px;
+      padding: 14px 38px;
       border-radius: 60px;
-      font-weight: 700;
+      font-weight: 800;
       transition: 0.15s;
-      border: none;
+      border: 4px solid white;
+      box-shadow: 0 4px 16px rgba(30, 26, 43, 0.1);
     }
-    .newsletter-form button:hover { background: #3a2d4a; transform: scale(1.03); }
+    .newsletter-form button:hover { background: #ff6b9d; transform: scale(1.04) rotate(-2deg); }
 
-    /* ----- footer (colorful) ----- */
+    /* ----- footer (playful) ----- */
     footer {
       padding: 36px 0 20px;
-      border-top: 3px solid #ffd5c2;
+      border-top: 6px solid #ffd6e0;
       margin-top: 24px;
-      background: #fcf6ff;
+      background: #fff5f8;
     }
     .footer-grid {
       display: flex;
@@ -526,26 +548,23 @@
       gap: 28px;
     }
     .footer-brand {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 1.6rem;
-      background: linear-gradient(135deg, #ff6b6b, #a18cd1);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.8rem;
+      color: #ff6b9d;
+      text-shadow: 2px 2px 0 #ffe2ec;
     }
     .footer-links { display: flex; gap: 40px; flex-wrap: wrap; }
     .footer-links div { line-height: 2.2; }
-    .footer-links div strong { display: block; font-weight: 700; color: #1e1a2b; }
-    .footer-links a { color: #6b5a7a; font-weight: 500; }
-    .footer-links a:hover { color: #ff6b6b; }
+    .footer-links div strong { display: block; font-weight: 800; color: #1e1a2b; }
+    .footer-links a { color: #6b5a7a; font-weight: 600; }
+    .footer-links a:hover { color: #ff6b9d; }
 
     /* responsive */
     @media (max-width: 800px) {
       .nav-links { display: none; }
       .mobile-toggle { display: block; }
-      .search-wrap input { width: 110px; }
-      .hero { flex-direction: column; text-align: center; padding: 32px 20px; }
+      .search-wrap input { width: 100px; }
+      .hero { flex-direction: column; text-align: center; padding: 32px 20px; border-radius: 40px; }
       .hero-content p { max-width: 100%; }
       .deal-card { flex-direction: column; text-align: center; }
       .deal-card img { width: 100%; height: auto; max-height: 200px; }
@@ -553,25 +572,26 @@
     }
     @media (max-width: 480px) {
       .header-grid { flex-wrap: wrap; }
-      .search-wrap input { width: 80px; }
+      .search-wrap input { width: 70px; }
       .product-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+      .hero-content h1 { font-size: 2.2rem; }
     }
     /* mobile nav */
     .mobile-nav {
       display: none;
-      background: #fff8f5;
+      background: #fff5f8;
       padding: 16px 24px 24px;
-      border-top: 2px solid #ffd5c2;
+      border-top: 4px solid #ffd6e0;
     }
     .mobile-nav.open { display: block; }
     .mobile-nav a {
       display: block;
       padding: 12px 0;
-      border-bottom: 1px solid #f0e7ff;
-      font-weight: 600;
+      border-bottom: 2px solid #ffe2ec;
+      font-weight: 700;
       color: #2d1b3d;
     }
-    .mobile-nav a i { margin-right: 10px; color: #ff6b6b; }
+    .mobile-nav a i { margin-right: 12px; color: #ff6b9d; }
   </style>
 </head>
 <body>
@@ -580,7 +600,7 @@
   <div class="container header-grid">
     <div style="display:flex;align-items:center;gap:8px;">
       <button class="mobile-toggle" id="mobileToggle" aria-label="menu"><i class="fas fa-bars"></i></button>
-      <div class="brand"><i class="fas fa-store-alt"></i> NexusShop</div>
+      <div class="brand"><i class="fas fa-crown"></i> NexusShop</div>
     </div>
 
     <nav class="nav-links">
@@ -612,18 +632,18 @@
 </header>
 
 <main class="container">
-  <!-- Hero (colorful) -->
+  <!-- Hero (playful) -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Bright finds, <br>bold style</h1>
-      <p>Discover vibrant tech, fashion & accessories — curated with love.</p>
+      <h1>Shop <span>happy</span> <br>vibes only</h1>
+      <p>✨ Fresh picks in tech, style & accessories — curated with joy.</p>
       <div class="hero-actions">
-        <button class="btn btn-primary" id="shopNow"><i class="fas fa-arrow-right"></i> Shop now</button>
-        <button class="btn btn-outline" id="exploreDeals">Explore deals</button>
+        <button class="btn btn-primary" id="shopNow"><i class="fas fa-arrow-right"></i> Explore</button>
+        <button class="btn btn-outline" id="exploreDeals"><i class="fas fa-gift"></i> Deals</button>
       </div>
     </div>
     <div class="hero-image">
-      <i class="fas fa-gem"></i>
+      <i class="fas fa-smile-wink"></i>
     </div>
   </section>
 
@@ -649,13 +669,13 @@
   <section id="deals">
     <div class="section-head">
       <h2>Flash sale</h2>
-      <span style="font-weight:700;color:#ff6b6b;background:#ffe6d5;padding:4px 18px;border-radius:40px;"><i class="fas fa-clock"></i> Limited</span>
+      <span style="font-weight:800;color:#ff6b9d;background:#ffe2ec;padding:4px 20px;border-radius:40px;border:3px solid white;"><i class="fas fa-clock"></i> Limited</span>
     </div>
     <div class="deal-card" id="dealCard">
       <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="MacBook Air">
       <div class="deal-content">
-        <h3>MacBook Air M2</h3>
-        <p style="color:#6b5a7a;">Thin, light, and incredibly fast.</p>
+        <h3><i class="fas fa-star"></i> MacBook Air M2</h3>
+        <p style="color:#6b5a7a;font-weight:600;">Thin, light, and incredibly fast.</p>
         <div class="timer" id="dealTimer">
           <div class="time-box"><div id="dealDays">0</div><span>days</span></div>
           <div class="time-box"><div id="dealHours">00</div><span>hrs</span></div>
@@ -664,10 +684,10 @@
         </div>
         <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
           <span class="deal-price">$999</span>
-          <span style="font-size:1.1rem;text-decoration:line-through;color:#a58ab5;">$1,199</span>
+          <span style="font-size:1.1rem;text-decoration:line-through;color:#a58ab5;font-weight:600;">$1,199</span>
           <span class="deal-discount">-17%</span>
         </div>
-        <button class="btn btn-primary" id="buyDeal" style="margin-top:12px;background:#ff6b6b;color:white;"><i class="fas fa-bolt"></i> Grab deal</button>
+        <button class="btn btn-primary" id="buyDeal" style="margin-top:12px;background:#ff6b9d;color:white;border-color:white;"><i class="fas fa-bolt"></i> Grab deal</button>
       </div>
     </div>
   </section>
@@ -683,13 +703,13 @@
   <!-- Newsletter -->
   <section>
     <div class="newsletter-box">
-      <h3>Stay in the loop</h3>
+      <h3><i class="fas fa-envelope-open-text"></i> Stay in the loop</h3>
       <p>Get early access to sales and new arrivals.</p>
       <form class="newsletter-form" id="newsletterForm">
         <input type="email" id="newsletterEmail" placeholder="Your email address" required>
         <button type="submit">Subscribe</button>
       </form>
-      <div id="newsletterMsg" style="margin-top:10px;font-weight:600;display:none;"></div>
+      <div id="newsletterMsg" style="margin-top:10px;font-weight:700;display:none;"></div>
     </div>
   </section>
 </main>
@@ -697,12 +717,12 @@
 <footer>
   <div class="container footer-grid">
     <div>
-      <div class="footer-brand"><i class="fas fa-store-alt" style="color:#ff6b6b; -webkit-text-fill-color:#ff6b6b;"></i> NexusShop</div>
-      <p style="color:#6b5a7a;max-width:260px;margin-top:6px;">Modern e‑commerce demo — vibrant & playful.</p>
+      <div class="footer-brand"><i class="fas fa-crown"></i> NexusShop</div>
+      <p style="color:#6b5a7a;max-width:260px;margin-top:6px;font-weight:600;">Modern e‑commerce — playful & colorful.</p>
       <div style="display:flex;gap:14px;margin-top:12px;">
-        <a href="#" style="color:#ff6b6b;"><i class="fab fa-twitter"></i></a>
-        <a href="#" style="color:#a18cd1;"><i class="fab fa-instagram"></i></a>
-        <a href="#" style="color:#ffb347;"><i class="fab fa-youtube"></i></a>
+        <a href="#" style="color:#ff6b9d;font-size:1.4rem;"><i class="fab fa-twitter"></i></a>
+        <a href="#" style="color:#ffb347;font-size:1.4rem;"><i class="fab fa-instagram"></i></a>
+        <a href="#" style="color:#4ea8de;font-size:1.4rem;"><i class="fab fa-youtube"></i></a>
       </div>
     </div>
     <div class="footer-links">
@@ -711,7 +731,7 @@
       <div><strong>Company</strong> <a href="#">About</a> <a href="#">Careers</a> <a href="#">Press</a></div>
     </div>
   </div>
-  <div style="text-align:center;color:#a58ab5;font-size:0.8rem;padding-top:24px;">© <span id="year"></span> NexusShop. All rights reserved.</div>
+  <div style="text-align:center;color:#a58ab5;font-weight:600;font-size:0.8rem;padding-top:24px;">© <span id="year"></span> NexusShop. All rights reserved.</div>
 </footer>
 
 <script>
@@ -725,11 +745,4 @@
     { id: 'accessories', name: 'Accessories', icon: 'fa-watch' }
   ];
 
-  const PRODUCTS = [
-    { id: 1, title: 'iPhone 14 Pro', price: 1099, oldPrice: 1199, rating: 5, reviews: 128, img: 'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=400&q=80', category: 'phones' },
-    { id: 2, title: 'MacBook Pro 14"', price: 1999, rating: 4, reviews: 86, img: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=400&q=80', category: 'laptops' },
-    { id: 3, title: 'Apple Watch S8', price: 349, oldPrice: 399, rating: 5, reviews: 214, img: 'https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&w=400&q=80', category: 'accessories' },
-    { id: 4, title: 'Nike Air Max 270', price: 150, rating: 4, reviews: 53, img: 'https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=400&q=80', category: 'footwear' },
-    { id: 5, title: 'Sony A7 IV', price: 2499, rating: 5, reviews: 42, img: 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=400&q=80', category: 'gadgets' },
-    { id: 6, title: 'Chanel No.5', price: 120, rating: 5, reviews: 189, img: 'https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=400&q=80', category: 'accessories' },
-    { id: 7, title: 'Travel Backpack', price: 79, oldPrice: 99, rating: 4, reviews: 67, img: 'https://images.unsplash.com/photo-1551232864-3f0890e580
+  const PRODUCTS =
